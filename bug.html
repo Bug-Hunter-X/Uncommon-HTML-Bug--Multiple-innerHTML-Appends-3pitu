@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    //Incorrect use of innerHTML to add multiple elements
+    document.getElementById("myDiv").innerHTML += "<h1>This is a heading</h1>";
+    document.getElementById("myDiv").innerHTML += "<p>This is another paragraph.</p>";
+  </script>
+</body>
+</html>
