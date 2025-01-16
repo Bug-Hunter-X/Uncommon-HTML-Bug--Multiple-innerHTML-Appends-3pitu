@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    //Correct use of innerHTML to add multiple elements or using appendChild
+    document.getElementById("myDiv").innerHTML = document.getElementById("myDiv").innerHTML + "<h1>This is a heading</h1><p>This is another paragraph.</p>";
+    //Another solution
+    const newHeading = document.createElement("h1");
+    newHeading.textContent = "This is a heading";
+    document.getElementById("myDiv").appendChild(newHeading);
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "This is another paragraph.";
+    document.getElementById("myDiv").appendChild(newParagraph);
+  </script>
+</body>
+</html>
